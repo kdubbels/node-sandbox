@@ -1,0 +1,17 @@
+{
+  "name": "d3-phantom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+  "d3": "~3.5.5",
+  "jsdom": "~3.1.2",
+  "xmldom": "~0.1.19"
+  },
+  "author": "Kristofer Dubbels",
+  "license": "ISC"
+}
