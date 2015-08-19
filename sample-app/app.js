@@ -1,3 +1,9 @@
+/*
+
+Demonstrates how routing works
+
+*/
+
 var express = require('express');
 var app = express();
 

@@ -1,1 +1,1 @@
-Experiments with defining my own Node modules.
+Template to show how to define a Node module.
