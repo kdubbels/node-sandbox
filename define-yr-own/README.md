@@ -1,0 +1,1 @@
+Template to show how to define a Node module.
