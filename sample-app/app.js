@@ -1,8 +1,13 @@
 var express = require('express');
 var app = express();
 
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+
 app.get('/', function(req, res) {
-	res.send('Hello Express');
+	res.render('default', {title: 'Home',
+	users: ['Kristofer', 'Kaitlin', 'Pikachu']
+	});
 });
 
 app.get('/me', function(req, res) {
