@@ -22,7 +22,6 @@ app.get("/hello/:who", function(request, response) {
 response.end("Hello, " + request.params.who + ".");
 console.log(response);
 console.log(request);
-// Fun fact: this has some security issues, which we'll get to!
 });
 
 app.use(function(request, response) {
