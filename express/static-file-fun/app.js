@@ -4,7 +4,7 @@ var fs = require("fs");
 var morgan = require("morgan");
 var app = express();
 
-app.use(morgan("short"));
+app.use(morgan("combined"));
 
 app.use(function(req, res, next) {
 console.log("Request IP: " + req.url);
