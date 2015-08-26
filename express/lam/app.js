@@ -8,7 +8,7 @@ var flash = require("connect-flash");
 var routes = require("./routes"); 
 var app = express();
 
-mongoose.connect("mongodb://localhost:27017/test");
+mongoose.connect("mongodb://localhost:27017/learn_about_me");
 
 app.set("port", process.env.PORT || 3000);
 app.set("views", path.join(__dirname, "views"));
