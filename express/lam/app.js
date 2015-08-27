@@ -8,6 +8,8 @@ var flash = require("connect-flash");
 var routes = require("./routes"); 
 var app = express();
 
+var setUpPassport = require("./setuppassport");
+
 mongoose.connect("mongodb://localhost:27017/learn_about_me");
 
 app.set("port", process.env.PORT || 3000);
@@ -23,6 +25,22 @@ saveUninitialized: true
 })); 
 app.use(flash()); 
 app.use(routes);
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(session({
+  secret: "TKRv0IJs=HYqrvagQ#&!F!%V]Ww/4KiVs$s,<<MX",   
+  resave: true,                                         
+  saveUninitialized: true                               
+}));
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+
+var app = express();
+mongoose.connect("mongodb://localhost:27017/test");
+setUpPassport();
+
 
 app.listen(app.get("port"), function() {
 console.log("Server started on port " + app.get("port"));
